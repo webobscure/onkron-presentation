@@ -8,23 +8,16 @@ import Preloader from './Preloader.jsx'
 import DeliveryLogistics from './DeliveryLogistics.jsx'
 import MarketplaceSupport from './MarketplaceSupport.jsx'
 function App() {
-  const [loading, setLoading] = useState(true)
 
   return (
     <>
-      {loading ? (
-        <Preloader onLoaded={() => setLoading(false)} />
-      ) : (
-        <>
           <Header />
-          <LogisticsHero isAppLoaded={!loading} />
+          <LogisticsHero  />
           <ServicesHero />
           <MainInfo />
           <Services />
           <DeliveryLogistics />
           <MarketplaceSupport />
-        </>
-      )}
     </>
   )
 }
